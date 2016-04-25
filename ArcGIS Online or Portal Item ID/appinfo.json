@@ -1,0 +1,94 @@
+{
+    "capabilities": {
+        "audio": false,
+        "bluetooth": false,
+        "camera": true,
+        "location": true,
+        "microphone": false,
+        "network": true,
+        "storage": false
+    },
+    "deployment": {
+        "android": {
+            "packageName": ""
+        },
+        "clientId": "",
+        "ios": {
+            "bundleId": "",
+            "codeSignIdentity": ""
+        },
+        "macos": {
+            "bundleId": "",
+            "codeSignIdentity": ""
+        }
+    },
+    "devicesTypes": [
+        "desktop",
+        "tablet",
+        "phone"
+    ],
+    "display": {
+        "desktop": {
+            "fullScreen": false,
+            "minimumHeight": 0,
+            "minimumWidth": 0
+        },
+        "phone": {
+            "landscape": true,
+            "portrait": true
+        },
+        "tablet": {
+            "landscape": true,
+            "portrait": true
+        }
+    },
+    "mainFile": "MyApp.qml",
+    "projectFile": "MyApp.qmlproject",
+    "properties": {
+        "App Description": "The Indoor Points Editor is a configurable AppStudio for ArcGIS template. Configure it to work with your own secured feature services. You can easily view floor plans, edit a points layer, a 1:M related table, and geodatabase attachments - all offline!",
+        "App Title": "AppStudio Indoor Points Editor",
+        "Basemap Tile Package Item ID": "ca4e891f86884fe5ab14d718c3d1a01f",
+        "Building Polygons LayerID": 2,
+        "Buildings layer building ID field": "BUILDING_NUMBER",
+        "Buildings layer building name field": "NAME",
+        "Floor Plans and Buildings Feature Service URL": "http://services.arcgis.com/8df8p0NlLFEShl0r/arcgis/rest/services/WestBankFloors_April2016/FeatureServer",
+        "Floor plan lines layer building ID field": "BUILDING",
+        "Floor plan lines layer floor field": "FLOOR",
+        "Floor plan lines layer sort field": "ELEVATION",
+        "Floor plan polygon layer building ID field": "BUILDING",
+        "Floor plan polygon layer floor field": "FLOOR",
+        "Floorplan Lines LayerID": 0,
+        "Floorplan Polygons LayerID": 1,
+        "Portal or ArcGIS Online URL": "http://umn.maps.arcgis.com",
+        "basemap1_name": "   Topography   ",
+        "basemap1_url": "http://services.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer",
+        "basemap2_name": "   Satellite   ",
+        "basemap2_url": "http://services.arcgisonline.com/arcgis/rest/services/World_Imagery/MapServer",
+        "basemap3_name": "    Streets    ",
+        "basemap3_url": "http://services.arcgisonline.com/arcgis/rest/services/World_Street_Map/MapServer",
+        "clientId": "8lFrEYanAZFe8kuF",
+        "featuresUrl2": "http://services.arcgis.com/8df8p0NlLFEShl0r/arcgis/rest/services/WIFI_DEMODATA/FeatureServer",
+        "pointsListView_titlefield1": "Asset_ID",
+        "pointsListView_titlefield2": "Asset_ID",
+        "pointsLyr_bldgIdField": "Building",
+        "pointsLyr_fkField": "GlobalID",
+        "pointsLyr_floorIdField": "Floor",
+        "pointsLyr_hideFields": "OBJECTID,GlobalID",
+        "pointsLyr_searchField": "Asset_ID",
+        "relTableListView_titlefield1": "Workorder_ID",
+        "relTableListView_titlefield2": "Workorder_Type",
+        "relTable_fkField": "Rel_Global_ID",
+        "relTable_hideFields": "OBJECTID,GlobalID,Rel_Global_ID"
+    },
+    "resources": {
+        "appIcon": "thumbnail.png",
+        "launchImageBackground": "launchimage-background.png",
+        "launchImageBackgroundColor": "#ffffff",
+        "launchImageOverlay": "launchimage-overlay.png"
+    },
+    "type": "app",
+    "urlScheme": "",
+    "version": {
+        "micro": 72
+    }
+}

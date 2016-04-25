@@ -1,0 +1,50 @@
+
+
+
+
+
+
+<html>
+
+
+
+<head>
+<title>
+Error: Invalid token.</title>
+<link href="/sharing/files/gw.css" rel="stylesheet" type="text/css"/>
+</head>
+
+<body>
+
+<table width="100%" class="topTable">
+<tr valign="top">
+<td>
+<b>ArcGIS Portal Directory</b>
+ | <a href="/sharing">Home</a>
+</td>
+<td align="right">
+
+<a href="/sharing/rest/login">Login</a>
+ | <a href="/sharing/rest/community/signup">Signup</a>
+
+ | <a href="/sharing/rest/generateToken">Generate Token</a>
+
+</td>
+</tr>
+</table>
+
+<table class="navTable" width="100%"><tr><td class="breadcrumbs">Error</td></tr></table>
+
+<div class="gwDiv">
+
+<h3>Invalid token.</h3><br/>
+
+<b>Error: </b>498<br/><br/>
+
+
+
+</div>
+
+</body>
+
+</html>

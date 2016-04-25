@@ -1,0 +1,216 @@
+{
+    "propertiesInfo": {
+        "title": "Configurable Properties",
+        "categoryInfos": [
+            {
+                "title": "Configurable Properties",
+                "propertyInfos": [
+                    {
+                        "type": "string",
+                        "label": "Portal or ArcGIS Online URL",
+                        "hint": "The app is designed to work with secured feature services and will ask the user to sign in to the portal specified by this url using OAuth2.",
+                        "name" : "Portal or ArcGIS Online URL"
+                    },
+                    {
+                        "type": "string",
+                        "label": "Application clientId",
+                        "hint": "You need to register your application at https://developers.arcgis.com which in turn will provide you with a clientID. Add the following rediect URI to the registered application item: urn:ietf:wg:oauth:2.0:oob",
+                        "name" : "clientId"
+                    },
+                    {
+                        "type": "string",
+                        "label": "App Title",
+                        "hint": "The app title is displayed in th title bar.",
+                        "name" : "App Title"
+                    },
+                    {
+                        "type": "string",
+                        "label": "App Description",
+                        "hint": "The app description is shown on the start screen of the application.",
+                        "name" : "App Description"
+                    },
+                    {
+                        "type": "string",
+                        "label": "Basemap Tile Package Item ID",
+                        "hint": "The map uses a tile package as a basemap. The tile package is also used to determine which features from the feature service (see next parameter) are downloaded to the device: only features that intersect the extent of the tile package will be downloaded. The tile package needs to be uploaded to ArcGIS Online and be accessible without authentication (i.e. shared with everyone, not just an ArcGIS Online Group.) Enter the Tile Package's Item ID. Preferrably scale levels should be identical to the ones used by the three onine basemap map services specified below.",
+                        "name" : "Basemap Tile Package Item ID"
+                    },
+                    {
+                        "type": "string",
+                        "label": "Floor Plans and Buildings Feature Service URL",
+                        "hint": "This feature service needs to contain one polygon layer with building footprints and two layers (lines and polygons) with interior building floor plans. Access to it can be public or can be restricted via ArcGIS Online item sharing properties.",
+                        "name" : "Floor Plans and Buildings Feature Service URL"
+                    },
+                    {
+                        "type": "number",
+                        "label": "Building Polygons LayerID",
+                        "hint": "The Feature Service layer ID of the building polygons layer. For example, if the buildings layer is 'on top of' all other layers this parameter should be 0 .",
+                        "name" : "Building Polygons LayerID"
+                    },
+                    {
+                        "type": "number",
+                        "label": "Floorplan Lines LayerID",
+                        "hint": "The Feature Service layer ID of the floor plan lines layer.",
+                        "name" : "Floorplan Lines LayerID"
+                    },
+                    {
+                        "type": "string",
+                        "label": "Buildings layer building name field",
+                        "hint": "Buildings layer building name field (unique values).",
+                        "name" : "Buildings layer building name field"
+                    },
+                    {
+                        "type": "string",
+                        "label": "Buildings layer building ID field",
+                        "hint": "Buildings layer building ID field (unique values).",
+                        "name" : "Buildings layer building ID field"
+                    },
+                    {
+                        "type": "string",
+                        "label": "Floor plan lines layer building ID field",
+                        "hint": "Floor plan lines layer building ID field (unique values).",
+                        "name" : "Floor plan lines layer building ID field"
+                    },
+                    {
+                        "type": "string",
+                        "label": "Floor plan lines layer floor field",
+                        "hint": "Floor plan lines layer floor field.",
+                        "name" : "Floor plan lines layer floor field"
+                    },
+                    {
+                        "type": "string",
+                        "label": "Floor plan lines layer sort field",
+                        "hint": "Floor plan lines layer sort field. If sort order should be alphabetical choose same as floor field ",
+                        "name" : "Floor plan lines layer sort field"
+                    },
+                    {
+                        "type": "number",
+                        "label": "Floorplan Polygons LayerID",
+                        "hint": "The Feature Service layer ID of the floor plan polygons layer.",
+                        "name" : "Floorplan Polygons LayerID"
+                    },
+                    {
+                        "type": "string",
+                        "label": "Floor plan polygon layer building ID field",
+                        "hint": "Floor plan polygon layer building ID field",
+                        "name" : "Floor plan polygon layer building ID field"
+                    },
+                    {
+                        "type": "string",
+                        "label": "Floor plan polygon layer floor field",
+                        "hint": "Floor plan polygon layer floor field",
+                        "name" : "Floor plan polygon layer floor field"
+                    },
+                    {
+                        "type": "string",
+                        "label": "Points layer Feature Service URL",
+                        "hint": "This feature service needs to contain one points layer (cordiante system: Web Mercator) with geodatabase attachments enabled, and one geodatabase table (a geodatabase relationship class can exist but is not necessary.) Access to it can be public or can be restricted via ArcGIS Online item sharing properties.",
+                        "name" : "featuresUrl2"
+                    },
+                    {
+                        "type": "string",
+                        "label": "Points layer building ID field",
+                        "hint": "This points layer attribute field stores the building id with which a point feature is associated. In combination with the parameter below it is used to display on the map only the points located on the currently visible floor. Further, when a new point is created this attribtue will automatically be set to the currently selected building id.",
+                        "name" : "pointsLyr_bldgIdField"
+                    },
+                    {
+                        "type": "string",
+                        "label": "Points layer floor ID field",
+                        "hint": "This points layer attribute field stores the floor id with which a point feature is associated. In combination with the parameter above it is used to display on the map only the points located on the currently visible floor. Further, when a new point is created this attribtue will automatically be set to the currently selected floor id.",
+                        "name" : "pointsLyr_floorIdField"
+                    },
+                    {
+                        "type": "string",
+                        "label": "Points layer search field",
+                        "hint": "The field that the points layer can be search on via the search menu",
+                        "name" : "pointsLyr_searchField"
+                    },
+                    {
+                        "type": "string",
+                        "label": "Points layer fields to hide in attribute display",
+                        "hint": "Points layer attribute fields to hide (comma seperated, without spaces). Example: OBJECTID,GlobalID . If you want to show all fields then just leave this parameter blank.",
+                        "name" : "pointsLyr_hideFields"
+                    },
+                    {
+                        "type": "string",
+                        "label": "Points layer foreign key attribute field",
+                        "hint": "The foreign key field in the geodatabase points feature class based on which the point feature can be associated with records form the geodatabase table.",
+                        "name" : "pointsLyr_fkField"
+                    },
+                    {
+                        "type": "string",
+                        "label": "Related table fields to hide in attribute display",
+                        "hint": "Related table attribute fields to hide (comma seperated, without spaces). Example: OBJECTID,GloabalID,Rel_GobalID . If you want to show all fields then just leave this parameter blank.",
+                        "name" : "relTable_hideFields"
+                    },
+                    {
+                        "type": "string",
+                        "label": "Related table foreign key attribute field",
+                        "hint": "The foreign key field in the geodatabase table based on which the table records can be associated with point features.",
+                        "name" : "relTable_fkField"
+                    },
+                    {
+                        "type": "string",
+                        "label": "Points layer display title attribute field",
+                        "hint": "One attribute to show in the points ListView.",
+                        "name" : "pointsListView_titlefield1"
+                    },
+                    {
+                        "type": "string",
+                        "label": "Points layer display subtitle field",
+                        "hint": "A second attribute to show in the points ListView.",
+                        "name" : "pointsListView_titlefield2"
+                    },
+                    {
+                        "type": "string",
+                        "label": "Related table display title field",
+                        "hint": "One attribute to show in the related records ListView.",
+                        "name" : "relTableListView_titlefield1"
+                    },
+                    {
+                        "type": "string",
+                        "label": "Related table display subtitle field",
+                        "hint": "A second attribute to show in the related records ListView.",
+                        "name" : "relTableListView_titlefield2"
+                    },
+                    {
+                        "type": "string",
+                        "label": "Online Basemap 1 Label",
+                        "hint": "Name for the first online basemap to show in the basemap picker.",
+                        "name" : "basemap1_name"
+                    },
+                    {
+                        "type": "string",
+                        "label": "Online Basemap 1 URL",
+                        "hint": "URL to the first online basemap map service REST endpoint.",
+                        "name" : "basemap1_url"
+                    },
+                    {
+                        "type": "string",
+                        "label": "Online Basemap 2 Label",
+                        "hint": "Name for the second online basemap to show in the basemap picker.",
+                        "name" : "basemap2_name"
+                    },
+                    {
+                        "type": "string",
+                        "label": "Online Basemap 2 URL",
+                        "hint": "URL to the second online basemap map service REST endpoint.",
+                        "name" : "basemap2_url"
+                    },
+                    {
+                        "type": "string",
+                        "label": "Online Basemap 3 Label",
+                        "hint": "Name for the third online basemap to show in the basemap picker.",
+                        "name" : "basemap3_name"
+                    },
+                    {
+                        "type": "string",
+                        "label": "Online Basemap 3 URL",
+                        "hint": "URL to the third online basemap map service REST endpoint.",
+                        "name" : "basemap3_url"
+                    }
+                ]
+            }
+        ]
+    }
+}
