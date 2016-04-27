@@ -12,7 +12,7 @@
         "android": {
             "packageName": ""
         },
-        "clientId": "",
+        "clientId": "wbYBjSyz7seN3m6t",
         "ios": {
             "bundleId": "",
             "codeSignIdentity": ""
@@ -45,40 +45,41 @@
     "mainFile": "MyApp.qml",
     "projectFile": "MyApp.qmlproject",
     "properties": {
-        "App Description": "The Indoor Points Editor is a configurable AppStudio for ArcGIS template. Configure it to work with your own secured feature services. You can easily view floor plans, edit a points layer, a 1:M related table, and geodatabase attachments - all offline!",
-        "App Title": "AppStudio Indoor Points Editor",
+        "App Description": "After signing in and downloading the layers to your device you can go offline and edit study spaces.",
+        "App Title": "Study Space Inventory (Demo)",
         "Basemap Tile Package Item ID": "ca4e891f86884fe5ab14d718c3d1a01f",
         "Building Polygons LayerID": 2,
         "Buildings layer building ID field": "BUILDING_NUMBER",
         "Buildings layer building name field": "NAME",
-        "Floor Plans and Buildings Feature Service URL": "http://services.arcgis.com/8df8p0NlLFEShl0r/arcgis/rest/services/WestBankFloors_April2016/FeatureServer",
-        "Floor plan lines layer building ID field": "BUILDING",
-        "Floor plan lines layer floor field": "FLOOR",
-        "Floor plan lines layer sort field": "ELEVATION",
-        "Floor plan polygon layer building ID field": "BUILDING",
-        "Floor plan polygon layer floor field": "FLOOR",
+        "Floor Plans and Buildings Feature Service URL": "http://services.arcgis.com/8df8p0NlLFEShl0r/arcgis/rest/services/WestBankBuildingsAndFloors/FeatureServer",
+        "Floor plan lines layer building ID field": "BUILDINGID",
+        "Floor plan lines layer floor field": "FLOORID",
+        "Floor plan lines layer sort field": "FLOORELEVATION",
+        "Floor plan polygon layer building ID field": "THEBUILDING",
+        "Floor plan polygon layer floor field": "THEFLOOR",
+        "Floor plan polygon layer room field": "THEROOM_ID",
         "Floorplan Lines LayerID": 0,
         "Floorplan Polygons LayerID": 1,
         "Portal or ArcGIS Online URL": "http://umn.maps.arcgis.com",
-        "basemap1_name": "   Topography   ",
+        "basemap1_name": "   Esri Topography   ",
         "basemap1_url": "http://services.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer",
-        "basemap2_name": "   Satellite   ",
+        "basemap2_name": "   Esri Satellite   ",
         "basemap2_url": "http://services.arcgisonline.com/arcgis/rest/services/World_Imagery/MapServer",
-        "basemap3_name": "    Streets    ",
+        "basemap3_name": "    Esri Streets    ",
         "basemap3_url": "http://services.arcgisonline.com/arcgis/rest/services/World_Street_Map/MapServer",
-        "clientId": "8lFrEYanAZFe8kuF",
-        "featuresUrl2": "http://services.arcgis.com/8df8p0NlLFEShl0r/arcgis/rest/services/WIFI_DEMODATA/FeatureServer",
-        "pointsListView_titlefield1": "Asset_ID",
-        "pointsListView_titlefield2": "Asset_ID",
-        "pointsLyr_bldgIdField": "Building",
-        "pointsLyr_fkField": "GlobalID",
-        "pointsLyr_floorIdField": "Floor",
-        "pointsLyr_hideFields": "OBJECTID,GlobalID",
-        "pointsLyr_searchField": "Asset_ID",
-        "relTableListView_titlefield1": "Workorder_ID",
-        "relTableListView_titlefield2": "Workorder_Type",
-        "relTable_fkField": "Rel_Global_ID",
-        "relTable_hideFields": "OBJECTID,GlobalID,Rel_Global_ID"
+        "clientId": "wbYBjSyz7seN3m6t",
+        "featuresUrl2": "http://services.arcgis.com/8df8p0NlLFEShl0r/arcgis/rest/services/Study_Space_Points/FeatureServer",
+        "pointsListView_titlefield1": "study_space_name",
+        "pointsListView_titlefield2": "BUILDING",
+        "pointsLyr_bldgIdField": "BUILDING",
+        "pointsLyr_fkField": "study_space_name",
+        "pointsLyr_floorIdField": "FLOOR",
+        "pointsLyr_hideFields": "OBJECTID,SITE,GlobalID,ROOM_ID,RMAREA,SITE_BUILDING_FLOOR",
+        "pointsLyr_searchField": "Study_Space_Name",
+        "relTableListView_titlefield1": "study_space_name",
+        "relTableListView_titlefield2": "Other_Comments",
+        "relTable_fkField": "study_space_name",
+        "relTable_hideFields": "OBJECTID,GlobalID,study_space_name"
     },
     "resources": {
         "appIcon": "thumbnail.png",
@@ -89,6 +90,6 @@
     "type": "app",
     "urlScheme": "",
     "version": {
-        "micro": 72
+        "micro": 83
     }
 }
