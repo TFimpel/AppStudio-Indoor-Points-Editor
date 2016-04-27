@@ -103,6 +103,12 @@
                     },
                     {
                         "type": "string",
+                        "label": "Floor plan polygon layer room field",
+                        "hint": "Floor plan polygon layer room field",
+                        "name" : "Floor plan polygon layer room field"
+                    },
+                    {
+                        "type": "string",
                         "label": "Points layer Feature Service URL",
                         "hint": "This feature service needs to contain one points layer (cordiante system: Web Mercator) with geodatabase attachments enabled, and one geodatabase table (a geodatabase relationship class can exist but is not necessary.) Access to it can be public or can be restricted via ArcGIS Online item sharing properties.",
                         "name" : "featuresUrl2"
