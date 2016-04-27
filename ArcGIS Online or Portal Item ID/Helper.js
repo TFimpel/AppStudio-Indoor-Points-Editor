@@ -445,7 +445,7 @@ function buildSelectedPointsList(iterator){
     while (iterator.hasNext()) {
         var feature = iterator.next();
         var objectID = (feature.attributeValue("OBJECTID").toString())
-        var pointsLyr_fkFieldValue = (feature.attributeValue(pointsLyr_fkField).toString())
+        var pointsLyr_fkFieldValue = (feature.attributeValue(pointsLyr_fkField))
         var pointsListView_titlefield1Value = (feature.attributeValue(pointsListView_titlefield1))
         var pointsListView_titlefield2Value =(feature.attributeValue(pointsListView_titlefield2))
         var pointsListView_bldgValue = (feature.attributeValue(pointsLyr_bldgIdField))
@@ -686,3 +686,21 @@ function writeSyncLog(){
 function writeSyncLog2(){
     syncLogFolder2.writeFile("syncLog2.txt","Offline Geodatabase last synced with server when this file was last modified. Very basic but hey, no annoying file locking issues...it just works")
 }
+
+
+//finds the objectid for a given building by iterating over the allbuidinglist
+function getBuildingObjectID(buidingID, buidlingList){
+    for( var i=0; i < allBlgdList.length ; ++i ) {
+        var blgdobjectid = allBlgdList[i][0]
+        var bldgname = allBlgdList[i][1]
+        var bldgid = allBlgdList[i][2]
+        if (bldgid === buidingID){
+            console.log('getBuildingObjectID returned ' + [blgdobjectid, bldgname, bldgid])
+            return [blgdobjectid, bldgname, bldgid]
+        }
+        if (i === allBlgdList.length-1){
+            console.log('getBuildingObjectID  was unable to find a building associated with this point.')
+            return ['','','']
+        }
+    }
+};
