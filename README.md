@@ -78,3 +78,4 @@ This is a student project and at this point has several known limitations:
 + Editor tracking fields are only recognized as such if they are named "created_user", "created_date", "last_edited_user", "last_edited_date". (The default when you enable editor tracking on hosted feature layers.)
 + The feature service of the points layer and basemap tile package has to be in web mercator coordinate system for geometry edits to work
 + Signing in (and thus offline editing) only possible when connected to internet
++ Performance of the search functionality can be very poor if the room or point feature services contain several thousands of records
