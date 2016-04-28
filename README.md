@@ -66,7 +66,7 @@ A configurable [ArcGIS AppStudio](https://appstudio.arcgis.com/) App Template to
 + Online Basemap 3 Label
 + Online Basemap 3 URL
 
-Note that the Basemap Tile Package Item needs to be publicly accessible. The floor plans and buildings feature service as well as the Point layer's feature service should be secured and shared through ArcGIS Online Group(s). They need to be sync enabled. The app will download a copy of all features and relaed records that intersect the tile package's extent.
+Note that the Basemap Tile Package Item needs to be publicly accessible. The floor plans and buildings feature service as well as the Point layer's feature service should be secured and shared through ArcGIS Online Group(s). They need to be sync enabled. The app will download a copy of all features and related records that intersect the tile package's extent.
 
 The configurable fields are used to determine which floors are display-able for each building and which asset points are located on which floor. The requirements for these fields are intentionally kept at a minimum, but it is critical to have these attribute data clean and thus relate-able.
 
