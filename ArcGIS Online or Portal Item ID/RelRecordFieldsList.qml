@@ -29,7 +29,6 @@ Flickable {
 
         anchors {
             top:featuredetailsPaneTopbar.bottom
-            //bottom:featureDetailsPane.bottom
             left:parent.left
             right:parent.right
 
@@ -39,7 +38,6 @@ Flickable {
         Repeater {
 
             model: relTableFieldsModel
-            //clip: true
 
             Row {
                 id: relRow
@@ -54,7 +52,6 @@ Flickable {
 
                 TextField {
                     id: relValueEdit
-                    //readOnly: if(editingMode =='attr'){false}else{true}
                     readOnly: false
                     text: string
                     horizontalAlignment: Text.AlignHCenter
