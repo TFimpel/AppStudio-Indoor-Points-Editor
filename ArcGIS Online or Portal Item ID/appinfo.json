@@ -12,7 +12,6 @@
         "android": {
             "packageName": ""
         },
-        "clientId": "wbYBjSyz7seN3m6t",
         "ios": {
             "bundleId": "",
             "codeSignIdentity": ""
