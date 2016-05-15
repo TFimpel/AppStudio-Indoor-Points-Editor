@@ -33,35 +33,57 @@ A configurable [ArcGIS AppStudio](https://appstudio.arcgis.com/) App Template to
 + Portal or ArcGIS Online URL
   + *The app is designed to work with secured feature services and will ask the user to sign in to the portal specified by this url using OAuth2.*
 + Application clientId
+  + *You need to register your application at https://developers.arcgis.com which in turn will provide you with a clientID. Add the following rediect URI to the registered application item: urn:ietf:wg:oauth:2.0:oob* 
 + App Title
+  + *The app title is displayed in th title bar.*
 + App Description
+  + *The app description is shown on the start screen of the application.* 
 + Basemap Tile Package Item ID
+  + *The map uses a tile package as a basemap. The tile package is also used to determine which features from the feature service (see next parameter) are downloaded to the device: only features that intersect the extent of the tile package will be downloaded. The tile package needs to be uploaded to ArcGIS Online and be accessible without authentication (i.e. shared with everyone, not just an ArcGIS Online Group.) Enter the Tile Package's Item ID. Preferrably scale levels should be identical to the ones used by the three onine basemap map services specified below.* 
 + Floor Plans and Buildings Feature Service URL
+  + *This feature service needs to contain one polygon layer with building footprints and two layers (lines and polygons) with interior building floor plans. Access to it can be public or can be restricted via ArcGIS Online item sharing properties.* 
 + Building Polygons LayerID
+  + *The Feature Service layer ID of the building polygons layer. For example, if the buildings layer is 'on top of' all other layers this parameter should be 0 .* 
 + Floorplan Lines LayerID
+  + *The Feature Service layer ID of the floor plan lines layer.* 
 + Buildings layer building name field
 + Buildings layer building ID field
 + Floor plan lines layer building ID field
 + Floor plan lines layer floor field
 + Floor plan lines layer sort field
 + Floorplan Polygons LayerID
+  + *The Feature Service layer ID of the floor plan polygons layer.* 
 + Floor plan polygon layer building ID field
 + Floor plan polygon layer floor field
 + Floor plan polygon layer room field
 + Points layer Feature Service URL
+  + *This feature service needs to contain one points layer (cordiante system: Web Mercator) with geodatabase attachments enabled, and one geodatabase table (a geodatabase relationship class can exist but is not necessary.) Access to it can be public or can be restricted via ArcGIS Online item sharing properties.* 
 + Points layer building ID field
+  + *This points layer attribute field stores the building id with which a point feature is associated. In combination with the parameter below it is used to display on the map only the points located on the currently visible floor. Further, when a new point is created this attribtue will automatically be set to the currently selected building id.* 
 + Points layer floor ID field
+  + *This points layer attribute field stores the floor id with which a point feature is associated. In combination with the parameter above it is used to display on the map only the points located on the currently visible floor. Further, when a new point is created this attribtue will automatically be set to the currently selected floor id.* 
 + Points layer search field
+  + *The field that the points layer can be search on via the search menu.* 
 + Points layer fields to hide in attribute display
+  + *Points layer attribute fields to hide (comma seperated, without spaces). Example: OBJECTID,GlobalID . If you want to show all fields then just leave this parameter blank.* 
 + Points layer foreign key attribute field
+  + *The foreign key field in the geodatabase points feature class based on which the point feature can be associated with records form the geodatabase table.* 
 + Related table fields to hide in attribute display
+  + *Related table attribute fields to hide (comma seperated, without spaces). Example: OBJECTID,GloabalID,Rel_GobalID . If you want to show all fields then just leave this parameter blank.* 
 + Related table foreign key attribute field
+  + *The foreign key field in the geodatabase table based on which the table records can be associated with point features.* 
 + Points layer display title attribute field
+  + *One attribute to show in the points ListView.* 
 + Points layer display subtitle field
+  + *A second attribute to show in the points ListView.* 
 + Related table display title field
+  + *One attribute to show in the related records ListView.* 
 + Related table display subtitle field
+  + *A second attribute to show in the related records ListView.* 
 + Online Basemap 1 Label
+ + *Name for the first online basemap to show in the basemap picker.* 
 + Online Basemap 1 URL
+ + *URL to the first online basemap map service REST endpoint.*
 + Online Basemap 2 Label
 + Online Basemap 2 URL
 + Online Basemap 3 Label
