@@ -21,9 +21,9 @@ A configurable [ArcGIS AppStudio](https://appstudio.arcgis.com/) App Template to
 ## How to use this
 1. Install AppStudio for ArcGIS and sing in to your ArcGIS Online account (you need a "Standard" license allocated to your account to sign in)
 2. Download the code in this repo, put the folder "ArcGIS Online or Portal Item ID" (incl. all its contents) into the appropriate directory on your computer. The directory path probably depends on your installation. On Windows by default it is C:\Users\<username>\ArcGIS\AppStudio\Apps\
-3. Open AppStudio for Desktop. The new app item will appear now and you can configure the properties (see below) and then upload the app item to your ArcGIS Online account. 
+3. Open AppStudio for Desktop. The new app item will appear now and you can configure the properties (see below) and then upload the app item to your ArcGIS Online account. Alternatively choose the "Create a new app from ..." option.
 4. Following that initial upload the id value in your local copy of file itminfo.json (line 16) will have changed to a long string of characters, something like "1234567890ABC123XYZ".
-5. Rename the app's folder name in the ...\ArcGIS\AppStudio\Apps\... directory from "arcgis-online-app-item-id-here" to this id value that your upload generated. (The reason for doing this is so that the app stores the local .geodatabase file in the correct place upon download to device)
+5. Rename the app's folder name in the ...\ArcGIS\AppStudio\Apps\... directory from "arcgis-online-app-item-id-here" to this id value that your upload generated. Depending on how you did step 3 this may not be necessary. (The reason for doing this is so that the app stores the local .geodatabase file in the correct place upon download to device.)
 7. Log in to ArcGIS Online, find the Native App item you just uploaded, and register it (type = Multiple, redirect url = urn:ietf:wg:oauth:2.0:oob). This will generate an app id or 'client id'.
 8. Enter this client id in MyApp.qml, line 63. Replace the exisitng value for the clientId property with your Native App item's clientId. (This is necessary for OAuth2 authentication to work.)
 6. Now "Update" the app item via the AppStudio Upload process. 
@@ -31,6 +31,7 @@ A configurable [ArcGIS AppStudio](https://appstudio.arcgis.com/) App Template to
 
 ## Configurable Properties (for example values look in appinfo.json)
 + Portal or ArcGIS Online URL
+  + *The app is designed to work with secured feature services and will ask the user to sign in to the portal specified by this url using OAuth2.*
 + Application clientId
 + App Title
 + App Description
@@ -68,7 +69,6 @@ A configurable [ArcGIS AppStudio](https://appstudio.arcgis.com/) App Template to
 
 Note that the Basemap Tile Package Item needs to be publicly accessible. The floor plans and buildings feature service as well as the Point layer's feature service should be secured and shared through ArcGIS Online Group(s). They need to be sync enabled. The app will download a copy of all features and related records that intersect the tile package's extent.
 
-The configurable fields are used to determine which floors are display-able for each building and which asset points are located on which floor. The requirements for these fields are intentionally kept at a minimum, but it is critical to have these attribute data clean and thus relate-able.
 
 ## Limitations
 This is a student project and at this point has several known limitations:
@@ -78,4 +78,4 @@ This is a student project and at this point has several known limitations:
 + Editor tracking fields are only recognized as such if they are named "created_user", "created_date", "last_edited_user", "last_edited_date". (The default when you enable editor tracking on hosted feature layers.)
 + The feature service of the points layer and basemap tile package has to be in web mercator coordinate system for geometry edits to work
 + Signing in (and thus offline editing) only possible when connected to internet
-+ Performance of the search functionality can be very poor if the room or point feature services contain several thousands of records
++ Performance of the search functionality and app in general can be very poor if the room or point feature services contain several thousands of records
