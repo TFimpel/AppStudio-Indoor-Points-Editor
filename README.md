@@ -99,5 +99,5 @@ This is a student project and at this point has several known limitations:
 + Subtypes and domains are not supported except for coded value domains. The attribute editing interface will provide a single choice interface listing the domain Codes (e.g. on Windows it will be a drop-down list, on Android as checkboxes, etc.) . I suggest you make domain Codes identical to the domain Descriptions
 + Editor tracking fields are only recognized as such if they are named "created_user", "created_date", "last_edited_user", "last_edited_date". (The default when you enable editor tracking on hosted feature layers.)
 + The feature service of the points layer and basemap tile package has to be in web mercator coordinate system for geometry edits to work
-+ Signing in (and thus offline editing) only possible when connected to internet
++ Signing in only possible when connected to internet
 + Performance of the search functionality and app in general can be very poor if the room or point feature services contain several thousands of records
